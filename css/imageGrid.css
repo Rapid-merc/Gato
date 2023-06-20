@@ -1,0 +1,33 @@
+.maincontent{
+    padding-top: 0%;
+    padding-left: 0%;
+}
+  
+.col{
+    padding: 1%;
+}
+.col-lg{
+    height: 200px;
+    overflow: hidden;
+    margin: 10px 0;
+    position: relative;
+    flex-basis: 30%;
+}
+
+/* Images crop and center to col-lg box up to 1000% centering (if 100% if it's 3x the size it doesn't fully center)Idk man why? projectors and stuff? */
+.col-lg img{
+    display: block;
+    position: absolute;
+    left: -1000%;
+    right: -1000%;
+    top: -1000%;
+    bottom: -1000%;
+    margin: auto;
+    min-height: 100%;
+    min-width: 100%;
+}
+.imgrid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
