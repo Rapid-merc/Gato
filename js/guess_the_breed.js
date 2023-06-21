@@ -37,10 +37,6 @@ randomBreeds.forEach((breedId) => {
   });
 }
 
-document.getElementById('breedOptions').addEventListener('click', () => {
-  document.getElementById('breedOptions').classList.add('stylingOption');
-});
-
 async function fetchAllCatBreeds() {
   const response = await fetch('https://api.thecatapi.com/v1/breeds');
   const data = await response.json();
