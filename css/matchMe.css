@@ -1,0 +1,55 @@
+.container{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.heading{
+    color: aliceblue;
+    font-size: 28px;
+    text-align: center;
+    margin-top: 60px;
+}
+table{
+    height: 50%;
+    margin-top: 20px;
+    border-spacing: 10px;
+    text-align: center;
+}
+
+td{
+    height: 120px;
+    width: 120px;
+    border-radius: 20px;
+    margin: 10px;
+    background-color: rgb(0, 200, 250);
+    box-shadow: 5px 5px 5px rgb(0, 120, 150);
+}
+
+button{
+    padding: 60px;
+    border: 0;
+    cursor: pointer;
+    background-image: url(../img/hello.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.invisible{
+    opacity: 0;
+}
+
+img{
+    width: 100%;
+    height: 100%;
+    display: none;
+}
+
+.score{
+    color: aliceblue;
+    font-size: 24px;
+    text-align: center;
+    margin-top: 20px;
+}

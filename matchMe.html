@@ -1,0 +1,113 @@
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/matchMe.css">
+  <link rel="stylesheet" href="css/nav.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <title>Document</title>
+</head>
+
+<body>
+
+  <header>
+    <div class="hamburger" onclick="openNav()">
+      <i class="fa fa-bars"></i>
+    </div>
+  </header>
+
+  <div class="sidenav" id="mySidenav">
+    <a class="closebtn" onclick="closeNav()">&times;</a>
+    <a href="#" class="link"><i class="fa fa-home"></i>Home</a>
+    <a href="#" class="link">Adopt Me!</a>
+    <a href="guess_the_breed.html" class="link">Guess Me!</a>
+    <a href="#" class="link">Match Me!</a>
+  </div>
+
+  <div class="container">
+    <div class="heading">Match in Pairs to win!</div>
+    <table>
+      <tr id="row1">
+        <td class="card">
+          <button id="btn0" class="invisible"></button>
+        </td>
+        <td>
+          <button id="btn1" class="invisible"></button>
+        </td>
+        <td>
+          <button id="btn2" class="invisible"></button>
+        </td>
+        <td>
+          <button id="btn3" class="invisible"></button>
+        </td>
+        <td>
+          <button id="btn4" class="invisible"></button>
+        </td>
+      </tr>
+        
+      <tr id="row2">
+        <td>
+          <button id="btn5" class="invisible"></button>
+        </td>
+        <td>
+          <button id="btn6" class="invisible"></button>
+        </td>
+        <td>
+          <button id="btn7" class="invisible"></button>
+        </td>
+        <td>
+          <button id="btn8" class="invisible"></button>
+        </td>
+        <td>
+          <button id="btn9" class="invisible"></button>
+        </td>
+      </tr>
+
+      <tr id="row3">
+        <td>
+          <button id="btn10" class="invisible"></button>
+        </td>
+        <td>
+          <button id="btn11" class="invisible"></button>
+        </td>
+        <td>
+          <button id="btn12" class="invisible"></button>
+        </td>
+        <td>
+          <button id="btn13" class="invisible"></button>
+        </td>
+        <td>
+          <button id="btn14" class="invisible"></button>
+        </td>
+      </tr>
+
+      <tr id="row4">
+        <td>
+          <button id="btn15" class="invisible"></button>
+        </td>
+        <td>
+          <button id="btn16" class="invisible"></button>
+        </td>
+        <td>
+          <button id="btn17" class="invisible"></button>
+        </td>
+        <td>
+          <button id="btn18" class="invisible"></button>
+        </td>
+        <td>
+          <button id="btn19" class="invisible"></button>
+        </td>
+      </tr>
+    </table>
+
+    <div class="score">Score: 0</div>
+
+  </div>
+
+  <script src="js/nav.js"></script>
+  <script src="js/matchMe.js"></script>
+
+</body>
+
+</html>
