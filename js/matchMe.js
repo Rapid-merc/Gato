@@ -34,10 +34,7 @@ async function fetchImages() {
 
 window.addEventListener('load', () => {
     fetchImages();
-    console.log(arr);
 });
-
-
 
 // Working of Buttons
 let btns = [];
@@ -60,13 +57,18 @@ for (let i = 0; i < 20; i++) {
                     visiblebtns[0].disabled = true;
                     visiblebtns[1].disabled = true;
                     visiblebtns = [];
-                    
                 }
                 // incorrect pair
                 else{
+                    let card0 = visiblebtns[0].parentElement;
+                    let card1 = visiblebtns[1].parentElement;
+                    card0.classList.add('wrongPair');
+                    card1.classList.add('wrongPair');
                     int = setInterval(()=>{
                         visiblebtns[0].classList.add('invisible');
                         visiblebtns[1].classList.add('invisible');
+                        card0.classList.remove('wrongPair');
+                        card1.classList.remove('wrongPair');
                         visiblebtns = [];
                         clearInterval(int);
                     }, 2000);
@@ -78,7 +80,6 @@ for (let i = 0; i < 20; i++) {
         else {
             isInvisible = true;
             btns[i].classList.add('invisible');
-            
         }
     });
 }
