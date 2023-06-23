@@ -1,6 +1,20 @@
 const url = `https://api.thecatapi.com/v1/images/search?limit=10`;
 const api_key = "live_3nJiUCYOflXjVBD58WkfkEbYTizGoxW0u2MkZozYL6XvySezM61cX4dggekfTQMP";
 
+let startbtn = document.getElementById('startbtn');
+let table = document.getElementById('table');
+let timer = document.getElementById('timer');
+let [seconds,minutes,hours] = [0,0,0];
+btns = [];
+isInvisible = [];
+visiblebtns = [];
+pairsCompleted = 0;
+
+for(let i = 0; i < 20; i++){
+    btns.push(document.getElementById(`btn${i}`));
+    isInvisible.push(true);
+}
+console.log(isInvisible);
 // function to shuffle an array
 function shuffle(array) {
   var tmp, current, top = array.length;
@@ -32,55 +46,85 @@ async function fetchImages() {
     }
 }
 
+function updateTimer(){
+    m = minutes < 10 ? "0" + minutes : minutes;
+    s = seconds < 10 ? "0" + seconds : seconds;
+
+    timer.innerHTML = `${m}:${s}`;
+}
+
+function Timer(){
+    seconds++;
+    if(seconds == 60){
+        seconds = 0;
+        minutes++;
+    }
+    updateTimer();
+}
+
 window.addEventListener('load', () => {
     fetchImages();
 });
 
-// Working of Buttons
-let btns = [];
-visiblebtns = [];
-for (let i = 0; i < 20; i++) {
-    btns.push(document.getElementById(`btn${i}`));
-    let isInvisible = false;
-    btns[i].addEventListener('click', () => {
-        // opening a card
-        if (isInvisible && (visiblebtns.length < 2)) {
-            isInvisible = false;
-            btns[i].classList.remove('invisible');
+startbtn.addEventListener('click', ()=>{
+    table.classList.remove('hide');
+    startbtn.classList.add('hide');
+    timer.classList.remove('hide');
 
-            visiblebtns.push(btns[i]);
-            console.log(visiblebtns);
+    let time = setInterval(Timer, 1000)
+    // Working of Buttons
+    for (let i = 0; i < 20; i++) {
+        btns[i].addEventListener('click', () => {
+            // opening a card
+            if (isInvisible[i] && (visiblebtns.length < 2)) {
+                isInvisible[i] = false;
+                btns[i].disabled = true;
+                btns[i].classList.remove('invisible');
 
-            if(visiblebtns.length == 2){
-                // check if correct pair
-                if(visiblebtns[0].style.backgroundImage == visiblebtns[1].style.backgroundImage){
-                    visiblebtns[0].disabled = true;
-                    visiblebtns[1].disabled = true;
-                    visiblebtns = [];
-                }
-                // incorrect pair
-                else{
-                    let card0 = visiblebtns[0].parentElement;
-                    let card1 = visiblebtns[1].parentElement;
-                    card0.classList.add('wrongPair');
-                    card1.classList.add('wrongPair');
-                    int = setInterval(()=>{
-                        visiblebtns[0].classList.add('invisible');
-                        visiblebtns[1].classList.add('invisible');
-                        card0.classList.remove('wrongPair');
-                        card1.classList.remove('wrongPair');
-                        visiblebtns = [];
-                        clearInterval(int);
-                    }, 2000);
-                }
+                visiblebtns.push(btns[i]);
                 console.log(visiblebtns);
-            }
-        }
-        // closing a card
-        else {
-            isInvisible = true;
-            btns[i].classList.add('invisible');
-        }
-    });
-}
 
+                if(visiblebtns.length == 2){
+                    // check if correct pair
+                    if(visiblebtns[0].style.backgroundImage == visiblebtns[1].style.backgroundImage){
+                        visiblebtns[0].disabled = true;
+                        visiblebtns[1].disabled = true;
+                        visiblebtns[0].parentElement.classList.add('greenGlow');
+                        visiblebtns[1].parentElement.classList.add('greenGlow');
+                        visiblebtns = [];
+                        pairsCompleted++;
+                        if(pairsCompleted == 10){
+                            clearInterval(time);
+                        }
+                    }
+                    // incorrect pair
+                    else{
+                        let card0 = visiblebtns[0].parentElement;
+                        let card1 = visiblebtns[1].parentElement;
+                        card0.classList.add('redGlow');
+                        card1.classList.add('redGlow');
+                        int = setInterval(()=>{
+                            isInvisible[btns.indexOf(visiblebtns[0])] = true;
+                            isInvisible[btns.indexOf(visiblebtns[1])] = true;
+                            visiblebtns[0].classList.add('invisible');
+                            visiblebtns[1].classList.add('invisible');
+                            visiblebtns[0].disabled = false;
+                            visiblebtns[1].disabled = false;
+                            card0.classList.remove('redGlow');
+                            card1.classList.remove('redGlow');
+                            visiblebtns = [];
+                            clearInterval(int);
+                        }, 2000);
+                    }
+                    console.log(visiblebtns);
+                }
+            }
+            // closing a card
+            else {
+                isInvisible[i] = true;
+                visiblebtns = [];
+                btns[i].classList.add('invisible');
+            }
+        });
+    }
+});
