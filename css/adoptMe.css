@@ -8,15 +8,17 @@
 
 body {
     font-family: Arial, sans-serif;
-    text-align: center;
+    /* text-align: center; */
 }
 
 .container {
     max-width: 500px;
-    margin: 0 auto;
+    height: 100vh;
+    margin: 0;
 }
 
 #inputContainer {
+    margin-top: 50px;
     margin-bottom: 20px;
 }
 
