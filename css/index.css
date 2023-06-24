@@ -43,28 +43,15 @@
     width: 500px;
 }
 
-
-/* Adopt Me */
-.one{
-    height: 120vh;
-    background-image: url(../img/hello.jpg);
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed;
-    background-blend-mode: color;
+.reveal{
+    position: relative;
+    transform: translateY(100px);
+    opacity: 0;
+    transition: 1s;
 }
-.one p{
-    color: aliceblue;
-}
-
-
-/* Guess Me */
-.two{
-    height: 120vh;
-    background-color: rgb(40, 40, 40);
-}
-.two p{
-    color: aliceblue;
+.reveal.active{
+    transform: translateY(0px);
+    opacity: 1;
 }
 
 

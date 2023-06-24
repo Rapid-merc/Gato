@@ -1,0 +1,12 @@
+/* Adopt Me */
+.one{
+    height: 120vh;
+    background-image: url(../img/hello.jpg);
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-blend-mode: color;
+}
+.one p{
+    color: aliceblue;
+}
