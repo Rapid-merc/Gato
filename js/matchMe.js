@@ -85,8 +85,13 @@ startbtn.addEventListener('click', ()=>{
                 console.log(visiblebtns);
 
                 if(visiblebtns.length == 2){
-                    // check if correct pair
+                    
+                    // disable all other buttons
+                    for(let j = 0; j < 20; j++) btns[j].disabled = true;
+                    
+                    // check if visible buttons is a correct pair
                     if(visiblebtns[0].style.backgroundImage == visiblebtns[1].style.backgroundImage){
+                        for(let j = 0; j < 20; j++) btns[j].disabled = false;
                         visiblebtns[0].disabled = true;
                         visiblebtns[1].disabled = true;
                         visiblebtns[0].parentElement.classList.add('greenGlow');
@@ -97,13 +102,14 @@ startbtn.addEventListener('click', ()=>{
                             clearInterval(time);
                         }
                     }
-                    // incorrect pair
+                    // if incorrect pair
                     else{
                         let card0 = visiblebtns[0].parentElement;
                         let card1 = visiblebtns[1].parentElement;
                         card0.classList.add('redGlow');
                         card1.classList.add('redGlow');
                         int = setInterval(()=>{
+                            for(let j = 0; j < 20; j++) btns[j].disabled = false;
                             isInvisible[btns.indexOf(visiblebtns[0])] = true;
                             isInvisible[btns.indexOf(visiblebtns[1])] = true;
                             visiblebtns[0].classList.add('invisible');
