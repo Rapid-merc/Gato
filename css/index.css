@@ -25,7 +25,7 @@
     color: rgb(158, 165, 172);
 }
 .content button{
-    color: aliceblue;
+    color: black;
     background-color: rgb(0, 200, 255);
     padding: 10px 15px;
     font-size: 20px;
@@ -34,7 +34,7 @@
     border-radius: 15px;
 }
 .content button:hover{
-    color: black;
+    color: aliceblue;
     position: relative;
     top: -5px;
 }
@@ -44,6 +44,7 @@
 }
 
 .one{
+    height: 120vh;
     background-image: url(../img/hello.jpg);
     background-size: cover;
     background-position: center;
@@ -54,12 +55,23 @@
     color: aliceblue;
 }
 
+.two{
+    height: 120vh;
+    background-color: rgb(40, 40, 40);
+}
 .two p{
     color: aliceblue;
 }
 
 .three{
-    background-color: aliceblue;
+    height: 120vh;
+    background-color: rgb(0, 0, 0);
+}
+.three p{
+    color: aliceblue;
+}
+.three video{
+    width: 40%;
 }
 
 footer{
