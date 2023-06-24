@@ -1,0 +1,63 @@
+/* Match Me */
+.three{
+    height: 120vh;
+    background-color: rgb(0, 0, 0);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.three .content{
+    width: 45%;
+    height: 60%;
+}
+.three .content p{
+    color: aliceblue;
+    font-size: 28px;
+}
+.three .heading{
+    width: 100%;
+    height: 25%;
+    color: aliceblue;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    overflow-y: hidden;
+    margin-bottom: 40px;
+}
+/* heading - bored */
+.three .content .heading p{
+    border-bottom: 45px solid rgb(210, 105, 0);
+    font-size: 60px;
+    z-index: 5;
+}
+.three .lottie{
+    width: 50%;
+    height: 150px;
+}
+.three .ready{
+    margin-top: 70px;
+    margin-bottom: 20px;
+}
+.three button{
+    color: black;
+    background-color: rgb(0, 200, 255);
+    padding: 10px 15px;
+    font-size: 20px;
+    font-weight: 600;
+    border: 0;
+    border-radius: 15px;
+}
+.three button:hover{
+    color: aliceblue;
+    position: relative;
+    top: -5px;
+}
+.three img{
+    height: 70%;
+    width: 45%;
+}
+
+
+@media screen and (max-width: 900px) {
+    
+}

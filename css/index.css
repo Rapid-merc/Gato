@@ -6,7 +6,7 @@
     align-items: center;
     justify-content: center;
 }
-.content{
+.zero .content{
     margin-left: 50px;
 }
 .welcome{
@@ -24,7 +24,7 @@
     font-size: 40px;
     color: rgb(158, 165, 172);
 }
-.content button{
+.zero .content button{
     color: black;
     background-color: rgb(0, 200, 255);
     padding: 10px 15px;
@@ -33,16 +33,18 @@
     border: 0;
     border-radius: 15px;
 }
-.content button:hover{
+.zero .content button:hover{
     color: aliceblue;
     position: relative;
     top: -5px;
 }
-.lottie{
+.zero .lottie{
     height: 500px;
     width: 500px;
 }
 
+
+/* Adopt Me */
 .one{
     height: 120vh;
     background-image: url(../img/hello.jpg);
@@ -55,6 +57,8 @@
     color: aliceblue;
 }
 
+
+/* Guess Me */
 .two{
     height: 120vh;
     background-color: rgb(40, 40, 40);
@@ -63,16 +67,6 @@
     color: aliceblue;
 }
 
-.three{
-    height: 120vh;
-    background-color: rgb(0, 0, 0);
-}
-.three p{
-    color: aliceblue;
-}
-.three video{
-    width: 40%;
-}
 
 footer{
     background-color: rgb(0, 200, 255);
