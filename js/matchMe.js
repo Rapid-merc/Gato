@@ -65,12 +65,11 @@ function Timer(){
 
 window.addEventListener('load', () => {
     fetchImages();
+    loading = setInterval(()=>{
+        preloader.classList.add('hide');
+        container.classList.remove('hide');
+    }, 6000)
 });
-
-loading = setInterval(()=>{
-    preloader.classList.add('hide');
-    container.classList.remove('hide');
-}, 5000)
 
 let isCompleted = false;
 startbtn.addEventListener('click', ()=>{

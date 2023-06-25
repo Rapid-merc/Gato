@@ -17,18 +17,18 @@ async function loadRandomCatBreedImageAndOptions() {
   const resultText = document.getElementById('resultText');
   resultText.textContent = '';
 
-const breed = await fetchRandomCatBreed();
+  const breed = await fetchRandomCatBreed();
 
-const imageUrl = await fetchBreedImage(breed.id);
-catImage.src = imageUrl;
+  const imageUrl = await fetchBreedImage(breed.id);
+  catImage.src = imageUrl;
 
-const allBreeds = await fetchAllCatBreeds();
-const randomBreeds = getRandomBreeds(allBreeds, breed.id, 3);
-randomBreeds.push(breed.id);
-randomBreeds.sort(() => Math.random() - 0.5);
+  const allBreeds = await fetchAllCatBreeds();
+  const randomBreeds = getRandomBreeds(allBreeds, breed.id, 3);
+  randomBreeds.push(breed.id);
+  randomBreeds.sort(() => Math.random() - 0.5);
 
-breedOptions.innerHTML = '';
-randomBreeds.forEach((breedId) => {
+  breedOptions.innerHTML = '';
+  randomBreeds.forEach((breedId) => {
     const option = document.createElement('button');
     option.classList.add('button-option');
     option.textContent = allBreeds[breedId].name;
@@ -66,7 +66,8 @@ function checkAnswer(selectedBreedId, correctBreedId, resultText, breedOptions) 
     if (breedOptions) {
       breedOptions.classList.add('correctOption');
     }
-  } else {
+  } 
+  else {
     resultText.textContent = `Wrong! Try again. Correct answer hint: ${correctBreedId}`;
     resultText.classList.remove('correct');
     if (breedOptions) {
@@ -75,13 +76,9 @@ function checkAnswer(selectedBreedId, correctBreedId, resultText, breedOptions) 
   }
 }
 
-function loadNewCat() {
-  loadRandomCatBreedImageAndOptions();
-}
-
 window.addEventListener('load', () => {
   loadRandomCatBreedImageAndOptions();
 });
 
 const newCatButton = document.getElementById('newCatButton');
-newCatButton.addEventListener('click', loadNewCat);
+newCatButton.addEventListener('click', loadRandomCatBreedImageAndOptions);
