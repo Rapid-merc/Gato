@@ -10,136 +10,73 @@
 body{
   background-color: black;
 }
-header{
-  position: fixed;
-  top: 0;
-  display: inline-block;
-  z-index: 9;
-  width: 100%;
-  padding: 20px;
-  background-color: rgb(0, 200, 255);
-  box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.5);
-  opacity: 0.8;
-}
-header .hamburger{
-  font-size: 20px;
-}
-header .fa-bars{
-  cursor: pointer;
-}
-
-.sidenav {
-  height: 100%;
-  width: 0;
-  position: fixed;
-  z-index: 10;
-  top: 0;
-  left: 0;
-  background-color: #111;
-  overflow-x: hidden;
-  padding-top: 100px;
-  box-shadow: 5px 0px 5px rgba(0, 0, 0, 0.5);
-  transition: 0.3s;
-  }
-  .sidenav a{
-    padding: 8px;
-    text-decoration: none;
-    text-align: center;
-    font-size: 24px;
-    color: #818181;
-    background-color: #111;
-    display: block;
-    transition: 0.3s;
-  }
-  .sidenav i{
-    font-size: 18px;
-    margin-right: 5px;
-  }
-  .sidenav a:hover {
-    color: #f1f1f1;
-  }
-  .sidenav .closebtn {
-    cursor: pointer;
-    position: absolute;
-    top: 0;
-    right: 25px;
-    font-size: 36px;
-    margin-left: 50px;
-  }
 
 .container {
-    margin: 10px auto;
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-  }
-  h1{
-    font-style: bold;
-    margin-top: 75px;
-    font-size: 40px;
-    color: rgb(210, 105, 0);
-  }
-  
-  #catImageContainer {
-    margin-top: 20px;
-    
-  }
-  
-  #catImage {
-    max-width: 400px;
-    height: 400px;
-    border: 2px solid black;
-    border-radius:5px;
-  }
-  
-  #breedOptions {
-    margin-top: 20px;
-    font-size: 20px;
-  }
-  
-  .button-option {
-    margin: 5px;
-    padding: 1px 5px;
-    background-color: #e3e3e3;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 20px;
-  }
-  
-  #resultText {
-    margin-top: 20px;
-    font-size: 30px;
-    color: aliceblue;
-  }
-  
-  #newCatButton {
-    margin: 10px 10px;
-    padding: 10px 15px;
-    background-color:rgb(0, 200, 255);
-    border: 2px solid black;
-    color: aliceblue;
-    font-size: 20px;
-    border-radius: 15px;
-    cursor: pointer;
-    font-size: 20px;
-    font-weight: 600;
-  }
- 
-  .stylingOptions{
-    transition: 0.5s;
-  }
-  .stylingOptions:hover{
-    transform: scale(0.95);
-  }
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+h1{
+  font-style: bold;
+  margin-top: 80px;
+  margin-bottom: 20px;
+  font-size: 40px;
+  color: rgb(210, 105, 0);
+}
 
-  .correctOption{
-    background-color: green;
-  }
-  .wrongOption{
-    background-color: red;
-  }
-  
-  
-  
+#catImage {
+  max-height: 380px;
+  border: 0;
+  border-radius: 20px;
+}
+
+#breedOptions {
+  margin-top: 20px;
+  font-size: 20px;
+}
+
+.button-option {
+  margin: 5px;
+  border: 0;
+  border-radius: 10px;
+  padding: 5px 10px;
+  font-size: 24px;
+  font-weight: 700;
+  color: black;
+  background-color: rgb(0, 200, 255);
+  cursor: pointer;
+}
+.button-option:hover{
+  opacity: 0.6;
+}
+
+#resultText {
+  margin-top: 20px;
+  font-size: 30px;
+  color: aliceblue;
+}
+
+#newCatButton {
+  margin-top: 10px;
+  padding: 10px 15px;
+  border: 0;
+  border-radius: 15px;
+  font-size: 24px;
+  font-weight: 600;
+  background-color:rgb(210, 105, 0);
+  color: aliceblue;
+  cursor: pointer;
+}
+#newCatButton:hover{
+  background-color: rgb(170, 60, 0);
+  transform: translateY(-5px);
+}
+
+.correctOption{
+  background-color: green;
+}
+.wrongOption{
+  background-color: red;
+}
