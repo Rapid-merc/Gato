@@ -1,3 +1,11 @@
+const newCatButton = document.getElementById('newCatButton');
+newCatButton.innerHTML = 'Skip';
+newCatButton.addEventListener('click', loadRandomCatBreedImageAndOptions);
+
+window.addEventListener('load', () => {
+  loadRandomCatBreedImageAndOptions();
+});
+
 async function fetchRandomCatBreed() {
   const response = await fetch('https://api.thecatapi.com/v1/breeds');
   const data = await response.json();
@@ -16,6 +24,7 @@ async function loadRandomCatBreedImageAndOptions() {
   const breedOptions = document.getElementById('breedOptions');
   const resultText = document.getElementById('resultText');
   resultText.textContent = '';
+  newCatButton.innerHTML = 'Skip';
 
   const breed = await fetchRandomCatBreed();
 
@@ -32,8 +41,8 @@ async function loadRandomCatBreedImageAndOptions() {
     const option = document.createElement('button');
     option.classList.add('button-option');
     option.textContent = allBreeds[breedId].name;
-    option.addEventListener('click', () => checkAnswer(breedId, breed.id, resultText, option));
     breedOptions.appendChild(option);
+    option.addEventListener('click', () => checkAnswer(breedId, breed.id, resultText, option));
   });
 }
 
@@ -62,7 +71,7 @@ function getRandomBreeds(allBreeds, correctBreedId, count) {
 function checkAnswer(selectedBreedId, correctBreedId, resultText, breedOptions) {
   if (selectedBreedId === correctBreedId) {
     resultText.textContent = 'Correct!';
-    resultText.classList.add('correct');
+    newCatButton.innerHTML = 'New Cat';
     if (breedOptions) {
       breedOptions.classList.add('correctOption');
     }
@@ -75,10 +84,3 @@ function checkAnswer(selectedBreedId, correctBreedId, resultText, breedOptions) 
     }
   }
 }
-
-window.addEventListener('load', () => {
-  loadRandomCatBreedImageAndOptions();
-});
-
-const newCatButton = document.getElementById('newCatButton');
-newCatButton.addEventListener('click', loadRandomCatBreedImageAndOptions);
