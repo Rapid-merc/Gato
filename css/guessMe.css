@@ -80,3 +80,21 @@ h1{
 .wrongOption{
   background-color: red;
 }
+
+
+@media screen and (max-width:400px){
+  h1{
+    font-size:35px;
+  }
+  #catImage {
+    max-width: 350px;
+  }
+  .button-option {
+    font-size: 12px;
+    padding: 5px 5px;
+  }
+  #resultText{
+    font-size: 27px;
+  }
+}   
+  
