@@ -32,9 +32,6 @@
     <div id="inputContainer">
       <label for="characteristics">Select Cat Characteristics:</label>
       <select id="characteristics">
-
-
-        
         <option value="">-- Select --</option>
         <option value="Playful">Playful</option>
         <option value="Friendly">Friendly</option>
@@ -64,10 +61,8 @@
         <option value="Easygoing">Easygoing</option>
         <option value="Quick">Quick</option>
         <option value="Adaptable">Adaptable</option>
-
-
-
       </select>
+
       <button id="findCatButton">Find My Cat</button>
     </div>
 
@@ -81,9 +76,15 @@
       <p id="catCharacteristics"></p>
     </div>
 
+    <div id="result"></div>
+
+    <a id="download-page-as-image" href=""><button >Download</button></a>
+
   </div>
 
   <script src="js/adoptMe.js"></script>
+  <script src="js/html2canvas.js"></script>
+  <script src="js/imageDownload.js"></script>
   <script src="js/nav.js"></script>
 
 </body>

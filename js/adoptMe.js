@@ -5,7 +5,6 @@ const catBreed = document.getElementById('catBreed');
 const catCharacteristics = document.getElementById('catCharacteristics');
 const catImage = document.getElementById('catImage');
 
-
 // Function to fetch cat data based on user characteristics
 async function fetchCatByCharacteristics(characteristics) {
   const response = await fetch(`https://api.thecatapi.com/v1/breeds?api_key=${apiKey}`);
@@ -52,21 +51,16 @@ findCatButton.addEventListener('click', async () => {
   if (characteristics !== '') {
     const cat = await fetchCatByCharacteristics(characteristics);
     displayCatInfo(cat);
+
+    // const element = document.getElementById('catResultContainer');
+    // html2canvas(element).then(function(canvas){
+    //   document.getElementById('result').append(canvas);
+
+    //   let cvs = document.querySelector('canvas');
+    //   let downloadLink = document.getElementById('download-page-as-image');
+
+    //   downloadLink.href = cvs.toDataURL();
+    //   downloadLink.download = 'fileName.png';
+    // });
   }
 });
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
