@@ -5,6 +5,7 @@ const catBreed = document.getElementById('catBreed');
 const catCharacteristics = document.getElementById('catCharacteristics');
 const catImage = document.getElementById('catImage');
 
+
 // Function to fetch cat data based on user characteristics
 async function fetchCatByCharacteristics(characteristics) {
   const response = await fetch(`https://api.thecatapi.com/v1/breeds?api_key=${apiKey}`);
@@ -24,7 +25,6 @@ async function fetchCatByCharacteristics(characteristics) {
 }
 
 // Function to display cat information
-// Function to display cat information
 function displayCatInfo(cat) {
   if (cat) {
     catBreed.textContent = cat.name;
@@ -32,14 +32,16 @@ function displayCatInfo(cat) {
     catImage.src = `https://cdn2.thecatapi.com/images/${cat.reference_image_id}.jpg`;
     catImage.alt = cat.name;
     catImage.style.display = 'block';
-    catResultContainer.classList.add('special'); // Add the 'special' class to the card
-  } else {
+    catResultContainer.classList.add('special'); // Add the special class to the card
+  }
+
+  else {
     catBreed.textContent = 'No Match Found';
     catCharacteristics.textContent = 'Sorry, we could not find a cat breed matching your characteristics.';
     catImage.src = '';
     catImage.alt = '';
     catImage.style.display = 'none';
-    catResultContainer.classList.remove('special'); // Remove the 'special' class from the card
+    catResultContainer.classList.remove('special'); // Remove the special class from the card
   }
 }
 
@@ -66,5 +68,5 @@ findCatButton.addEventListener('click', async () => {
 
 
 
-  
+
 
