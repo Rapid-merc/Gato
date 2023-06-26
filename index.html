@@ -42,9 +42,22 @@
         <p>Adopt Me!</p>
     </div>
 
-    <div class="container two reveal">
-        <p>Guess Me!</p>
+    <div class="container two">
+        <div class="breedBox reveal">
+            <select onchange="showBreedImage(value)" name="breed_selector" id="breed_selector"></select>
+            <div id="breed_json"></div>
+            <img id="breed_image"></img>
+        </div>
+        <div class="content reveal">
+            <h2>Can You Recognise?</h2>
+            <p>Test your knowledge and ability to recognise cat breeds.</p>
+            <p>We have provided some for reference too.</p>
+            <lottie-player class="lottie" src="https://assets1.lottiefiles.com/packages/lf20_Zz37yH.json" background="transparent"  speed="1" loop autoplay></lottie-player>
+            <p class="takeTheTest">Try It Now!</p>
+            <a href="guessMe.html"><button>Lets Go</button></a>
+        </div>
     </div>
+    <script src="js/two.js"></script>
 
     <div class="container three">
         <div class="content reveal">

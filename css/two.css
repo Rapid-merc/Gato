@@ -2,7 +2,69 @@
 .two{
     height: 120vh;
     background-color: rgb(40, 40, 40);
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
-.two p{
+.two .breedBox{
+    width: 40%;
+    height: 70%;
+    text-align: center;
+}
+#breed_image{
+    max-width: 90%;
+    max-height: 90%;
+    border: 0;
+    border-radius: 20px;
+}
+.two .breedBox select{
     color: aliceblue;
+    font-size: 20px;
+    font-weight: 700;
+    background: transparent;
+    border: 0;
+    border-bottom: 2px solid aliceblue;
+    margin-bottom: 10px;
+}
+.two .breedBox select option{
+    background-color: rgb(40, 40, 40);
+}
+.two .content{
+    width: 50%;
+    height: 70%;
+    margin-left: 30px;
+    text-align: left;
+}
+.two .content h2{
+    color: rgb(210, 105, 0);
+    font-size: 48px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+.two .content p{
+    color: aliceblue;
+    font-size: 28px;
+}
+.two .content .lottie{
+    height: 200px;
+    width: 200px;
+    margin: auto;
+}
+.two .content .takeTheTest{
+    margin: 20px 0px;
+}
+
+.two button{
+    color: black;
+    background-color: rgb(0, 200, 255);
+    padding: 10px 15px;
+    font-size: 20px;
+    font-weight: 700;
+    border: 0;
+    border-radius: 15px;
+}
+.two button:hover{
+    color: aliceblue;
+    position: relative;
+    top: -5px;
 }
