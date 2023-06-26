@@ -21,9 +21,9 @@
     <div class="sidenav" id="mySidenav">
         <a class="closebtn" onclick="closeNav()">&times;</a>
         <a href="#" class="link"><i class="fa fa-home"></i>Home</a>
-        <a href="adoptMe.html" class="link">Adopt Me!</a>
-        <a href="guessMe.html" class="link">Guess Me!</a>
-        <a href="matchMe.html" class="link">Match Me!</a>
+        <a href="#one" class="link">Adopt Me!</a>
+        <a href="#two" class="link">Guess Me!</a>
+        <a href="#three" class="link">Match Me!</a>
     </div>
 
     <div class="container zero">
@@ -38,11 +38,20 @@
         <lottie-player class="lottie" src="https://assets7.lottiefiles.com/packages/lf20_DnLK6k.json" background="transparent"  speed="1" loop autoplay></lottie-player>
     </div>
 
-    <div class="container one">
-        <p>Adopt Me!</p>
+    <div class="container one" id="one">
+        <div class="subContainer">
+            <div class="content reveal">
+                <h1>Want a Cat?</h1>
+                <p>Its Easy. Adopt One!</p>
+                <p>And before adopting, one should know about cats and their varieties right?</p>
+                <lottie-player class="lottie" src="https://assets8.lottiefiles.com/packages/lf20_kxmify2d.json" background="transparent"  speed="1" loop autoplay></lottie-player>
+                <p class="learnMore">Learn about them here!</p>
+                <a href="adoptMe.html"><button>Check Now</button></a>
+            </div>
+        </div>
     </div>
 
-    <div class="container two">
+    <div class="container two" id="two">
         <div class="breedBox reveal">
             <select onchange="showBreedImage(value)" name="breed_selector" id="breed_selector"></select>
             <div id="breed_json"></div>
@@ -59,7 +68,7 @@
     </div>
     <script src="js/two.js"></script>
 
-    <div class="container three">
+    <div class="container three" id="three">
         <div class="content reveal">
             <div class="heading">
                 <p>Bored?</p>

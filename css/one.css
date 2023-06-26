@@ -1,12 +1,51 @@
 /* Adopt Me */
 .one{
-    height: 120vh;
+    height: 110vh;
     background-image: url(../img/hello.jpg);
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
     background-blend-mode: color;
 }
-.one p{
+.one .subContainer{
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.75);
+}
+.one .content{
+    text-align: center;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.one .content h1{
+    color: rgb(210, 105, 0);
+    font-size: 60px;
+}
+.one .content p{
     color: aliceblue;
+    font-size: 28px;
+}
+.one .content .learnMore{
+    margin: 20px 0px;
+}
+.one .content .lottie{
+    max-height: 250px;
+    max-width: 250px;
+    margin: auto;
+    border-radius: 20px;
+    margin-top: 20px;
+}
+.one button{
+    color: black;
+    background-color: rgb(0, 200, 255);
+    padding: 8px 10px;
+    font-size: 20px;
+    font-weight: 700;
+    border: 0;
+    border-radius: 15px;
+}
+.one button:hover{
+    color: aliceblue;
+    position: relative;
+    top: -5px;
 }

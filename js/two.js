@@ -2,6 +2,10 @@ const url = 'https://api.thecatapi.com/v1/breeds';
 const api_key = "live_3nJiUCYOflXjVBD58WkfkEbYTizGoxW0u2MkZozYL6XvySezM61cX4dggekfTQMP";
 let storedBreeds = []
 
+window.addEventListener('load', ()=>{
+    fetchBreeds();
+});
+
 async function fetchBreeds() {
     const response = await fetch(url, {
         headers: { 'x-api-key': api_key }
@@ -23,7 +27,7 @@ async function fetchBreeds() {
     }
     showBreedImage(0);
 }
-fetchBreeds();
+
 function showBreedImage(index){ 
   document.getElementById("breed_image").src= storedBreeds[index].image.url;
 }
