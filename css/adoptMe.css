@@ -1,109 +1,27 @@
-@font-face {
-    font-family: 'MyCustomFont';
-    src: url(../Font/handwriting-draft_free-version.ttf) format('truetype');
-    font-weight: normal;
-    font-style: normal;
-    color: rgb(255, 33, 113);
+.container{
+    margin-top: 70px;
+    text-align: center;
+}
+.container h1{
+    color: rgb(210, 105, 0);
+    margin: 0px auto;
+}
+#inputContainer label{
+    color: aliceblue;
+}
+.card{
+    max-height: 30%;
+    max-width: 30%;
+    background-color: rgb(0, 200, 250);
+}
+.card img{
+    max-width: 90%;
+    max-height: 50%;
+}
+.card p{
+    color: black;
 }
 
-
-.container {
-    /* max-width: 500px; */
-    height: 100vh;
-    margin-top: 80px;
-    display: flex;
-    flex-direction: column;
-}
-
-#inputContainer {
-    margin-top: 20px;
-    margin-bottom: 20px;
-}
-
-#findCatButton {
-    padding: 10px;
-    font-size: 16px;
-    border-radius: 5px;
-    cursor: pointer;
-    display: block;
-    margin: 0 auto;
-    background-color: orange;
-}
-
-#catResultContainer {
-    margin-top: 20px;
-}
-
-#catResultContainer h2 {
-    margin-bottom: 10px;
-}
-
-#catImageContainer {
-    margin-top: 20px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-#catImage {
-    max-width: 400px;
-    max-height: 300px;
-    object-fit: contain;
-    border: 1px solid #cccbcb;
-    border-radius: 5px;
+.hide{
     display: none;
-}
-
-#catCharacteristics {
-    margin-top: 20px;
-    text-align: center;
-}
-h1{
-    color: orange;
-}
-label{
-    color: orange;
-}
-
-.card {
-    background-color: #fff;
-    border-radius: 5px;
-    box-shadow: 0 10px 4px rgba(0, 0, 0, 0.1);
-    padding: 20px;
-    margin-top: 20px;
-    text-align: center;
-    border: 20px solid transparent;
-    border-image: url(../img/bg.png) 30 round;
-}
-
-.card img {
-    max-width: 100%;
-    max-height: 200px;
-    object-fit: cover;
-    border-radius: 5px;
-    margin-bottom: 10px;
-}
-
-.card h2 {
-    font-size: 24px;
-    margin-bottom: 10px;
-    font-family: 'MyCustomFont';
-    color: rgb(255, 0, 153);
-}
-
-.card p {
-    font-size: 16px;
-    color: #48575a;
-}
-
-.card.special {
-    background-color: #f7f6e6;
-    opacity: 1;
-    background-image: linear-gradient(30deg, rgb(255, 189, 247) 12%, transparent 12.5%, transparent 87%, rgb(255, 189, 247) 87.5%, rgb(255, 189, 247)), linear-gradient(150deg, rgb(255, 189, 247) 12%, transparent 12.5%, transparent 87%, rgb(255, 189, 247) 87.5%, rgb(255, 189, 247)), linear-gradient(30deg, rgb(255, 189, 247) 12%, transparent 12.5%, transparent 87%, rgb(255, 189, 247) 87.5%, rgb(255, 189, 247)), linear-gradient(150deg, rgb(255, 189, 247) 12%, transparent 12.5%, transparent 87%, rgb(255, 189, 247) 87.5%, rgb(255, 189, 247)), linear-gradient(60deg, rgb(255, 236, 236) 25%, transparent 25.5%, transparent 75%, rgb(255, 236, 236) 75%, rgb(255, 236, 236)), linear-gradient(60deg, rgb(255, 236, 236) 25%, transparent 25.5%, transparent 75%, rgb(255, 236, 236) 75%, rgb(255, 236, 236));
-    background-size: 18px 32px;
-    background-position: 0 0, 0 0, 9px 16px, 9px 16px, 0 0, 9px 16px;
-}
-
-.buttonn{
-    padding: 10px;
 }

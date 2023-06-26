@@ -27,11 +27,11 @@
   </div>
 
   <div class="container">
-    <h1>Cat Identity Match</h1>
+    <h1>Find Your Cat</h1>
     
     <div id="inputContainer">
-      <label for="characteristics">Select Cat Characteristics:</label>
-      <select id="characteristics">
+      <label for="characteristic">Select Cat Characteristics:</label>
+      <select id="characteristic">
         <option value="">-- Select --</option>
         <option value="Playful">Playful</option>
         <option value="Friendly">Friendly</option>
@@ -62,29 +62,17 @@
         <option value="Quick">Quick</option>
         <option value="Adaptable">Adaptable</option>
       </select>
-
       <button id="findCatButton">Find My Cat</button>
     </div>
 
-    <div class="card" id="catResultContainer">
-      <h2 id="catBreed"></h2>
+    <span class="hide" id="sorry">Sorry, Could not find any cat</span>
 
-      <div id="catImageContainer">
-        <img id="catImage" alt="">
-      </div>
-
-      <p id="catCharacteristics"></p>
+    <div class="cards" id="catResultContainer">
     </div>
-
-    <div id="result"></div>
-
-    <a id="download-page-as-image" href=""><button >Download</button></a>
 
   </div>
 
   <script src="js/adoptMe.js"></script>
-  <script src="js/html2canvas.js"></script>
-  <script src="js/imageDownload.js"></script>
   <script src="js/nav.js"></script>
 
 </body>
