@@ -1,0 +1,29 @@
+.four{
+    height: 100vh;
+    width: 100%;
+    background-color: rgb(40, 40, 40);
+}
+.four .content{
+    height: 80%;
+    text-align: center;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.four h1{
+    color: rgb(210, 105, 0);
+    font-size: 40px;
+    margin: 30px;
+}
+.four p{
+    color: aliceblue;
+    font-size: 28px;
+}
+.four .content img{
+    max-height: 50%;
+    max-width: 50%;
+    border: 0;
+    border-radius: 20px;
+    margin: 20px auto;
+    box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.7);
+}
