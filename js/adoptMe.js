@@ -29,26 +29,31 @@ async function displayInfo(cats){
         // Child elements
         let h1 = document.createElement('h1');
         h1.setAttribute('id', `breed${id}`);
+        h1.classList.add('breed');
         h1.innerHTML = cats[id].name;
         card.appendChild(h1);
 
         let img = document.createElement('img');
         img.setAttribute('id', `image${id}`);
         img.setAttribute('src', cats[id].image.url);
+        img.classList.add('image');
         card.appendChild(img);
-
-        let country = document.createElement('p');
-        country.setAttribute('id', `characteristics${id}`);
-        country.innerHTML = `Country of Origin: ${cats[id].origin}`;
-        card.appendChild(country);
 
         let characteristics = document.createElement('p');
         characteristics.setAttribute('id', `characteristics${id}`);
-        characteristics.innerHTML = cats[id].temperament;
+        characteristics.classList.add('temperament');
+        characteristics.innerHTML = `"${cats[id].temperament}"`;
         card.appendChild(characteristics);
+
+        let country = document.createElement('p');
+        country.setAttribute('id', `country${id}`);
+        country.classList.add('country');
+        country.innerHTML = `Country of Origin: ${cats[id].origin}`;
+        card.appendChild(country);
 
         let description = document.createElement('p');
         description.setAttribute('id', `description${id}`);
+        description.classList.add('description');
         description.innerHTML = cats[id].description;
         card.appendChild(description);
 
@@ -57,6 +62,7 @@ async function displayInfo(cats){
         btn.innerHTML = 'Learn More';
         wiki.href = cats[id].wikipedia_url;
         wiki.setAttribute('target', '_blank');
+        wiki.classList.add('wiki');
         wiki.appendChild(btn);
         card.appendChild(wiki);
 
@@ -70,7 +76,12 @@ findCatButton.addEventListener('click', async () => {
     const characteristic = characteristicInput.value;
     if (characteristic !== '') {
         const cats = await fetchCatsByCharacteristic(characteristic);
-        if(cats.length !== 0) displayInfo(cats);
-        else document.getElementById('sorry').classList.remove('hide');
+        if(cats.length !== 0){
+            document.getElementById('result').innerHTML = `Showing ${cats.length} Results`;
+            displayInfo(cats);
+        }
+        else{
+            document.getElementById('result').innerHTML = "Sorry, Could not find any result.";
+        }
     }
 });

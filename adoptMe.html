@@ -26,8 +26,8 @@
     <a href="matchMe.html" class="link">Match Me!</a>
   </div>
 
-  <div class="container">
-    <h1>Find Your Cat</h1>
+  <div class="container" id="top">
+    <h1 class="heading">Find Your Cat</h1>
     
     <div id="inputContainer">
       <label for="characteristic">Select Cat Characteristics:</label>
@@ -65,12 +65,14 @@
       <button id="findCatButton">Find My Cat</button>
     </div>
 
-    <span class="hide" id="sorry">Sorry, Could not find any cat</span>
+    <span id="result"></span>
 
     <div class="cards" id="catResultContainer">
     </div>
 
   </div>
+
+  <a href="#top"><button id="topbtn">↑</button></a>
 
   <script src="js/adoptMe.js"></script>
   <script src="js/nav.js"></script>
