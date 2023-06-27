@@ -53,24 +53,3 @@
     transform: translateY(0px);
     opacity: 1;
 }
-
-
-footer{
-    background-color: rgb(0, 200, 255);
-    padding: 20px;
-    text-align: right;
-    font-family: sans-serif;
-}
-table{
-    width: 70%;
-    margin-left: 30px;
-    text-align: left;
-    font-family: 'Raleway', sans-serif;
-}
-th{
-    margin-bottom: 30px;
-    font-size: 20px;
-}
-td{
-    margin: 10px;
-}

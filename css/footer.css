@@ -1,0 +1,56 @@
+footer{
+    background-color: rgb(0, 200, 255);
+    text-align: right;
+    font-family: sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+table{
+    height: 100%;
+    width: 60%;
+    margin: 0px 0px 0px 30px;
+    text-align: left;
+    font-family: 'Raleway', sans-serif;
+    border-spacing: 10px;
+}
+th{
+    font-size: 24px;
+}
+td a{
+    text-decoration: none;
+    color: black;
+    font-weight: 500;
+    cursor: pointer;
+}
+td a:hover{
+    color: rgb(50, 50, 50);
+}
+
+.club{
+    width: 20%;
+    max-height: 50%;
+    text-align: left;
+}
+.club p{
+    font-family: sans-serif;
+    margin: 10px;
+    text-align: right;
+}
+.enigma_logo{
+    height: 100px;
+    width: 100px;
+    margin: 100px 20px 20px 20px;   
+}
+.connect{
+    font-size: 20px;
+    font-weight: 600;
+}
+.socials{
+    margin: 10px auto;
+}
+.socials img{
+    height: 30px;
+    width: 30px;
+    margin: 3px;
+}
