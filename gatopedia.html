@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gatopedia</title>
+    <link rel="stylesheet" href="css/gatopedia.css">
+    <link rel="stylesheet" href="css/nav.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+    <header>
+        <div class="hamburger" onclick="openNav()">
+            <i class="fa fa-bars"></i>
+        </div>
+    </header>
+
+    <div class="sidenav" id="mySidenav">
+        <a class="closebtn" onclick="closeNav()">&times;</a>
+        <a href="index.html" class="link"><i class="fa fa-home"></i>Home</a>
+        <a href="adoptMe.html" class="link">Adopt Me!</a>
+        <a href="guessMe.html" class="link">Guess Me!</a>
+        <a href="matchMe.html" class="link">Match Me!</a>
+        <a href="#" class="link">Gatopedia!</a>
+    </div>
+    <div class="search-bar">
+        <input type="text" id="searchInput" placeholder="Enter a cat name">
+        <button onclick="searchCat()">Search</button>
+    </div>
+
+    <div id="result"></div>
+
+    <script src="js/gatopedia.js"></script>
+    <script src="js/nav.js"></script>
+</body>
+
+</html>
