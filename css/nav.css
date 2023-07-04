@@ -66,3 +66,9 @@ header .fa-bars{
     font-size: 36px;
     margin-left: 50px;
   }
+
+@media screen and (max-width: 600px) {
+  header{
+    padding: 12px;
+  }
+}

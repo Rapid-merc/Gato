@@ -58,6 +58,9 @@
     .zero{
         flex-direction: column;
     }
+    .zero .content{
+        margin-left: 30px;
+    }
     .welcome{
         font-size: 30px;
     }

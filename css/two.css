@@ -1,6 +1,6 @@
 /* Guess Me */
 .two{
-    height: 120vh;
+    height: 110vh;
     background-color: rgb(40, 40, 40);
     display: flex;
     align-items: center;
@@ -69,4 +69,32 @@
     color: aliceblue;
     position: relative;
     top: -5px;
+}
+
+@media screen and (max-width: 600px) {
+    .two{
+        flex-direction: column;
+    }
+    .two .breedBox{
+        width: 60%;
+        height: 30%;
+        margin-top: 40px;
+    }
+    .two .breedBox select{
+        font-size: 18px;
+        font-weight: 600;
+        padding: 5px;
+    }
+    .two .content{
+        width: 80%;
+        height: 60%;
+        text-align: center;
+        margin-left: 0;
+    }
+    .two .content h2{
+        font-size: 40px;
+    }
+    .two .content p{
+        font-size: 20px;
+    }
 }
