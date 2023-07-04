@@ -15,9 +15,10 @@ body{
   text-align: center;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
 }
+
 h1{
   font-style: bold;
   margin-top: 80px;
@@ -53,13 +54,13 @@ h1{
 }
 
 #resultText {
-  margin-top: 20px;
+  margin-top: 15px;
+  margin-bottom: 15px;
   font-size: 30px;
   color: aliceblue;
 }
 
 #newCatButton {
-  margin-top: 10px;
   padding: 10px 15px;
   border: 0;
   border-radius: 15px;
@@ -82,19 +83,19 @@ h1{
 }
 
 
-@media screen and (max-width:400px){
+@media screen and (max-width: 600px){
   h1{
     font-size:35px;
   }
   #catImage {
-    max-width: 350px;
+    width: 80%;
   }
   .button-option {
-    font-size: 12px;
+    font-size: 20px;
     padding: 5px 5px;
   }
   #resultText{
-    font-size: 27px;
+    font-size: 24px;
   }
 }   
   
