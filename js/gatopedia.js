@@ -35,6 +35,14 @@ function displayCatInfo(data) {
     resultElement.classList.add("preserve-formatting");
 }
 
+//Capture enter 
+function handleKeyPress(e){
+    var key=e.keyCode || e.which;
+     if (key==13){
+        searchCat();
+     }
+   }
+
 
 
 
