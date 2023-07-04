@@ -101,7 +101,8 @@
 .legal {
     display: flex;
     flex-wrap: wrap;
-    color: #999;
+    color: black;
+    font-family: sans-serif;
 }
 
 .lobe {
