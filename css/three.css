@@ -73,7 +73,7 @@
     }
     .three .content .heading p{
         border-bottom: 45px solid rgb(210, 105, 0);
-        font-size: 50px;
+        font-size: 48px;
     }
     .three .lottie{
         width: 50%;
@@ -100,7 +100,7 @@
         margin-bottom: 20px;
     }
     .three .content p{
-        font-size: 24px;
+        font-size: 20px;
     }
     .three .ready{
         margin-top: 30px;
