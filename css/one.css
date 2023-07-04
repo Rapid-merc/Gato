@@ -49,3 +49,12 @@
     position: relative;
     top: -5px;
 }
+
+@media screen and (max-width: 600px) {
+    .one .content h1{
+        font-size: 50px;
+    }
+    .one .content p{
+        font-size: 24px;
+    }
+}
