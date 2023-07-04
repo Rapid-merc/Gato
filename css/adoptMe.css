@@ -45,14 +45,14 @@
 
 span{
     color: aliceblue;
-    font-size: 24px;
-    margin: 30px auto;
+    font-size: 20px;
+    margin: 20px auto;
 }
 
 .cards{
     display: flex;
     flex-wrap: wrap;
-    align-items: center;
+    align-items: start;
     justify-content: center;
     max-width: 100%;
 }
@@ -133,4 +133,42 @@ span{
 }
 .hide{
     display: none;
+}
+
+@media screen and (max-width: 600px) {
+    .container .heading{
+        font-size: 35px;
+    }
+    #inputContainer select{
+        font-size: 18px;
+        padding: 5px;
+        margin-right: 10px;
+        margin-top: 10px;
+    }
+    #inputContainer button{
+        padding: 8px 12px;
+        font-size: 18px;
+        border-radius: 10px;
+        margin-top: 10px;
+    }
+    .cards{
+        flex-direction: column;
+    }
+    
+    .card{
+        max-width: 80%;
+    }
+    .card .temperament{
+        font-size: 18px;
+    }
+    .card .country{
+        margin: 15px auto;
+    }
+    .card .description{
+        font-size: 18px;
+    }
+    .card button{
+        font-size: 18px;
+        padding: 10px;
+    }
 }
