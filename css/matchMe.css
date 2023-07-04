@@ -82,3 +82,25 @@ table button{
     text-align: center;
     margin-top: 20px;
 }
+
+@media screen and (max-width: 600px) {
+    #preloader{
+        background-size: 40%;
+    }
+    .heading{
+        margin-top: 50px;
+        margin-bottom: 20px;
+    }
+    td{
+        height: 56px;
+        width: 56px;
+        border-radius: 10px;
+    }
+    table{
+        height: 30%;
+        border-spacing: 10px;
+    }
+    table button{
+        padding: 28px;
+    }
+}
